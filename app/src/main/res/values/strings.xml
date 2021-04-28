@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">恋恋SDK</string>
+    <string name="value_token_input" translatable="false">请输入恋恋ThirdToken值</string>
+    <string name="value_third_uid_input" translatable="false">请输入恋恋ThirdUid值</string>
+    <string name="value_third_tid_input" translatable="false">请输入恋恋ThirdTid值</string>
+    <string name="string_auth_failed" translatable="false">授权失败</string>
+    <string name="string_auth_cancel" translatable="false">授权取消</string>
+    <string name="string_need_register" translatable="false">未注册</string>
+</resources>
