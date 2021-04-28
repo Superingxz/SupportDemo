@@ -10,4 +10,4 @@ import os.imlive.sdk.FloatingApplication
  *     desc  :
  * </pre>
  */
-class MyApp : FloatingApplication()
+class App : FloatingApplication()

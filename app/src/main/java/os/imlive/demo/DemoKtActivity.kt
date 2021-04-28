@@ -11,7 +11,7 @@ import os.imlive.demo.databinding.DemoBinding
 import os.imlive.sdk.FloatLiveManager
 import os.imlive.sdk.util.FloatLiveTools
 
-class SdkActivity : AppCompatActivity() {
+class DemoKtActivity : AppCompatActivity() {
     private lateinit var mBinding: DemoBinding
     private var commDialog: CommDialog? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,11 +34,11 @@ class SdkActivity : AppCompatActivity() {
         }
         mBinding.login.setOnClickListener {
             if (TextUtils.isEmpty(mBinding.tokenEt.text.toString())) {
-                ToastKit.show(this, R.string.value_token_input)
+                ToastKit.show(this, R.string.sdk_input_token)
                 return@setOnClickListener
             }
             if (TextUtils.isEmpty(mBinding.thirdUidEt.text.toString())) {
-                ToastKit.show(this, R.string.value_third_uid_input)
+                ToastKit.show(this, R.string.sdk_input_user_id)
                 return@setOnClickListener
             }
             FloatLiveManager.getInstance()
@@ -49,13 +49,13 @@ class SdkActivity : AppCompatActivity() {
                             ToastKit.show(this, msg)
                         }
                         LoginResponse.AUTH_FAILED -> { // 授权失败
-                            ToastKit.show(this, R.string.string_auth_failed)
+                            ToastKit.show(this, R.string.sdk_string_auth_failed)
                         }
                         LoginResponse.AUTH_CANCEL -> { // 授权取消
-                            ToastKit.show(this, R.string.string_auth_cancel)
+                            ToastKit.show(this, R.string.sdk_string_auth_cancel)
                         }
                         LoginResponse.NEED_REGISTER -> { // 未注册
-                            ToastKit.show(this, R.string.string_need_register)
+                            ToastKit.show(this, R.string.sdk_string_need_register)
                         }
                         LoginResponse.TOKEN_AUTH_FAILED -> { // token校验失效
                         }
