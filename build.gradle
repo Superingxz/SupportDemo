@@ -12,7 +12,6 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath "com.alibaba:arouter-register:$arouter_register_version"
     }
@@ -24,9 +23,8 @@ allprojects {
         jcenter()
         mavenCentral()
         maven { url 'https://dl.bintray.com/umsdk/release' }
-        maven { url rootProject.ext.maven["jitpack"] }
-        maven { url rootProject.ext.maven["aliyun"] }
-        maven { url rootProject.ext.maven["bintray"] }
+        maven { url 'https://maven.aliyun.com/repository/releases' }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
         maven { url "https://jitpack.io" }
     }
 }

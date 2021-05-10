@@ -76,7 +76,6 @@ android {
     //打包配置
     buildTypes {
         debug {
-            buildConfigField "String", "BASE_URL", "\"http://testapi.pp.suishoubo666.com\""
             //清理无用资源
             shrinkResources false
             //是否启动ZipAlign压缩
@@ -88,7 +87,6 @@ android {
             debuggable true
         }
         release {
-            buildConfigField "String", "BASE_URL", "\"https://api.pp.suishoubo666.com\""
             //清理无用资源
             shrinkResources true
             //是否启动ZipAlign压缩
@@ -100,11 +98,6 @@ android {
             signingConfig signingConfigs.release
         }
     }
-
-//    buildFeatures {
-//        dataBinding = true
-//        viewBinding = true
-//    }
 
     android {
         viewBinding.enabled = true

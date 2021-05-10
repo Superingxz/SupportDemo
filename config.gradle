@@ -1,13 +1,11 @@
 ext {
     //Android 配置
     android = [
-            compileSdkVersion: 29,
-            buildToolsVersion: "29.0.3",
-            applicationId    : "os.imlive.floating",
-            applicationIdSdk : "os.imlive.sdk",
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.0",
             applicationIdDemo: "os.imlive.demo",
             minSdkVersion    : 21,
-            targetSdkVersion : 29,
+            targetSdkVersion : 28,
             versionCode      : 126,
             versionName      : "1.2.6",
             javaVersion      : JavaVersion.VERSION_1_8,
@@ -102,6 +100,7 @@ ext {
             "captcha" : 'com.yunpian:captcha:1.0.4' ,
             "wlmedia" : 'ywl.ywl5320:wlmedia:1.1.4-small'
     ]
+
     //仓库
     maven = [
             "jitpack": "https://jitpack.io",
@@ -111,10 +110,6 @@ ext {
 
     //keystore
     keystorePath = rootDir.toString() + '\\floating.jks'
-//    keystorePassword = properties.getProperty("keystorePassword")
-//    alias = properties.getProperty("alias")
-//    aliasPassword = properties.getProperty("aliasPassword")
-
     keystorePassword = 'floating@friends'
     alias = 'floating'
     aliasPassword = 'floating@friends'
