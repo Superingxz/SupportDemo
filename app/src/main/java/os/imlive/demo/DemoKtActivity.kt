@@ -6,7 +6,6 @@ import android.text.TextUtils
 import os.imlive.base.data.model.manager.UserManager
 import os.imlive.base.http.response.LoginResponse
 import os.imlive.base.widget.dialog.CommDialog
-import os.imlive.common.ui.wallet.dialog.RechargeDialog
 import os.imlive.demo.databinding.DemoBinding
 import os.imlive.sdk.FloatLiveManager
 import os.imlive.sdk.util.FloatLiveTools
@@ -81,7 +80,7 @@ class DemoKtActivity : AppCompatActivity() {
             )
         }
         FloatLiveManager.getInstance().setRechargeCallback { context ->
-            RechargeDialog().show(context.supportFragmentManager, "rechargeDialog")
+            ToastKit.show(context, "调起充值页面")
         }
     }
 

@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import os.imlive.base.http.response.LoginResponse;
 import os.imlive.base.widget.dialog.CommDialog;
-import os.imlive.common.ui.wallet.dialog.RechargeDialog;
 import os.imlive.sdk.FloatLiveManager;
 import os.imlive.sdk.util.FloatLiveTools;
 
@@ -84,7 +83,7 @@ public class DemoActivity extends AppCompatActivity {
             }, R.string.clear_cache_confirm, null, R.string.cancel, R.string.sure, R.string.remind);
         });
         FloatLiveManager.getInstance().setRechargeCallback(context -> {
-            new RechargeDialog().show(context.getSupportFragmentManager(), "rechargeDialog");
+            ToastKit.show(context, "调起充值页面");
         });
     }
 
