@@ -29,7 +29,6 @@
 <!--            </intent-filter>-->
         </activity>
 
-        <!--FileProvide-->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -39,6 +38,10 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
+
+        <meta-data
+            android:name="FLOAT_CHANNEL"
+            android:value="lianlian" />
     </application>
 
 </manifest>
