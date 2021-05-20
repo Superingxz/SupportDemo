@@ -162,6 +162,7 @@ dependencies {
     api 'com.google.guava:guava:28.1-android'
     api 'com.belerweb:pinyin4j:2.5.0'
     api 'com.yunpian:captcha:1.0.4'
+    api 'me.grantland:autofittextview:0.2.1'
 
     api 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
     api 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
@@ -179,6 +180,9 @@ dependencies {
     api "android.arch.persistence.room:rxjava2:$room_version"
     api "android.arch.persistence.room:guava:$room_version"
     testApi "android.arch.persistence.room:testing:$room_version"
+
+    api 'com.qiniu:happy-dns:0.2.13'
+    api 'io.agora.rtc:full-sdk:3.1.2'
 
     implementation 'com.alibaba:arouter-api:1.5.1'
     kapt 'com.alibaba:arouter-compiler:1.5.1'
