@@ -1,5 +1,6 @@
 package os.imlive.demo
 
+import com.bumptech.glide.request.target.ViewTarget
 import os.imlive.sdk.FloatingApplication
 
 /**
@@ -10,4 +11,9 @@ import os.imlive.sdk.FloatingApplication
  *     desc  :
  * </pre>
  */
-class App : FloatingApplication()
+class App : FloatingApplication() {
+    override fun onCreate() {
+        super.onCreate()
+        ViewTarget.setTagId(R.id.glide_view_tag)
+    }
+}
