@@ -39,9 +39,9 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-        <meta-data
-            android:name="FLOAT_CHANNEL"
-            android:value="lianlian" />
+<!--        <meta-data-->
+<!--            android:name="FLOAT_CHANNEL"-->
+<!--            android:value="lianlian" />-->
     </application>
 
 </manifest>
