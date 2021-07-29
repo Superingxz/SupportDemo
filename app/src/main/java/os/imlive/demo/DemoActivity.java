@@ -9,6 +9,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.text.TextUtils;
 import android.widget.TextView;
 
+import os.imlive.base.config.FloatLiveEventType;
 import os.imlive.base.http.response.LoginResponse;
 import os.imlive.base.widget.dialog.CommDialog;
 import os.imlive.sdk.FloatLiveManager;
@@ -82,8 +83,12 @@ public class DemoActivity extends AppCompatActivity {
                 commDialog.dismiss();
             }, R.string.clear_cache_confirm, null, R.string.cancel, R.string.sure, R.string.remind);
         });
-        FloatLiveManager.getInstance().setRechargeCallback(context -> {
-            ToastKit.show(context, "调起充值页面");
+        FloatLiveManager.getInstance().setFloatLiveListener(type -> {
+            switch (type) {
+                case FloatLiveEventType.FLOAT_LIVE_TYPE_RECHARGE:
+                    ToastKit.show(this, "调起充值页面");
+                    break;
+            }
         });
     }
 
